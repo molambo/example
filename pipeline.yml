@@ -1,0 +1,14 @@
+---
+groups:
+- name: main
+  jobs:
+  - husky
+   
+jobs:
+- name: husky 
+  plan:
+    - task: example-task
+      file: task.yml
+
+      
+ 
