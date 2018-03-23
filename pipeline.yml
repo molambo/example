@@ -3,12 +3,20 @@ groups:
 - name: main
   jobs:
   - husky
+
+resources:
+- name: example
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/molambo/example
    
 jobs:
 - name: husky 
   plan:
-    - task: example-task
-      file: task.yml
+  - get: example
+  - task: example-task
+    file: example/task.yml
 
       
  
