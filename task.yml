@@ -1,5 +1,8 @@
 ---
 platform: linux
 
+inputs:
+- name: example
+
 run:
   path: example/task.sh
